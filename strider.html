@@ -1,0 +1,44 @@
+<div class="load-data">
+    <div class="block-content">
+        <div class="project-head">
+            <h1 class="block-title"><a href="https://games.coderaky.com" target="_blank">STRIDER - Online Game Portal</a></h1>
+            <div class="tags"><span>Category : </span> Web Apps</div>
+            <div class="tags"><span>Role : </span>Developer</div>
+        </div>
+        <p class="project-description"></p>
+        <div class="project-media row">
+            <div class="col-md-6">
+                <a href="https://games.coderaky.com" target="_blank"><img src="images/portfolio/strider/strider.jpg" alt="" /></a>
+                <a href="https://games.coderaky.com/thecube.html" target="_blank"><img src="images/portfolio/strider/cube.jpg" alt="" /></a>
+            </div>
+            <div class="col-md-6">
+                <a href="https://games.coderaky.com/rabbitrun.html" target="_blank"><img src="images/portfolio/strider/rabbitrun.jpg" alt="" /></a>
+                <a href="https://games.coderaky.com/chess.html" target="_blank"><img src="images/portfolio/strider/chess.jpg" alt="" /></a>
+            </div>
+        </div>
+        <div class="project-nav text-center">
+            <span class="float-left">
+                <a class="open-project" href="posters.html">&leftarrow; Previous Project</a>
+            </span>
+            <span class="">
+                <a id="close-project" href="#"><i class="ion-grid"></i></a>
+            </span>
+            <span class="float-right">
+                <a class="open-project" href="repeater.html">Next Project &rightarrow; </a>
+            </span>
+        </div>
+    </div>
+    <div class="row text-center">
+        <div class="col-md-12 btn-email">
+            <a class="btn lowercase" href="games.coderaky.com" target="_blank">games.coderaky.com</a>
+        </div>
+    </div>
+
+    <script>
+        $('#close-project').on('click', function() {
+            $('.content-blocks.pop').removeClass('showx');
+            $('.inline-menu-container').addClass('showx');
+            $('.content-blocks.pop section').empty();
+        });
+    </script>
+</div>
