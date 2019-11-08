@@ -155,9 +155,9 @@ a:not([href]):not([tabindex]) {
 
 .btn-download:before {
     position: absolute;
-    content: '\f1fe';
+/*     content: '\f1fe'; */
     /* content: '\f46b'; for m*/
-    /* content: '\f407'; for c*/
+    content: '\f407';
     font-family: 'Ionicons';
     top: 12px;
     right: 16px;
