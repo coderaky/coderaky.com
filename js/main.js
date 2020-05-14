@@ -66,7 +66,7 @@
 	});
 
 	$('#element').typed({
-	    strings: ["Hello👋","🔰Abhishek","Malviyan🤘🎓","Developer💻⌨️","Designer🎨","Engineer📚🔩","Hacker☣️💉","Basketball Player🏀","Photographer📹📷","Editor🎬","Gamer🕹🎮","blogger✍","Swimmer🎽🏊‍","Chef🍽️🍜","Singer🎤","Rider🏍️🏁","Problem solver🎲♟","Quick Learner🚀","Well Manager📈📅","Creative🌈🌟","Music Lover🎧","coffee☕ is 🖤","Foodie🍦🍽","Cricket fan🏏","Pure Veg🥒🥦","Single💖","9Sep🎂🎃","🕛12'o clock🛌💤","Josephite🎌","Jeevanite🏫","Gorakhpur🏡","🔰DAY⚔️🛡️⚔️ SCHOLAR🔰","Spreading smiles🤗","hello.coderaky.com🔗","© coderaky","Searching...🛸"],
+	    strings: ["Hello👋","Malviyan🤘🎓","Developer💻⌨️","Designer🎨","Engineer📚🔩","Basketball Player🏀","Game 🕹🎮","Articles ✍","Swimm 🎽🏊‍","Chef🍽️🍜","Problem solver🎲♟","Quick Learner🚀","Creative🌈🌟","Cricket fan🏏","Pure Veg🥒🥦","9Sep🎂🎃","🕛12'o clock🛌💤","Josephite🎌","Jeevanite🏫","Gorakhpur🏡","Spreading smiles🤗","© coderaky"],
 	    typeSpeed: -50,
 	    loop: true,
 	    startDelay: 500,
@@ -161,60 +161,60 @@
 	    $('.inline-menu-container.style2').removeClass('dark');
 	});
 
-	google.maps.event.addDomListener(window, 'load', init);
+	// google.maps.event.addDomListener(window, 'load', init);
 
-	function init() {
-	    var mapOptions = {
+	// function init() {
+	//     var mapOptions = {
 
-	        zoom: 11,
+	//         zoom: 11,
 
-	        center: new google.maps.LatLng(26.706335, 83.446500),
+	//         center: new google.maps.LatLng(26.706335, 83.446500),
 
-	        scrollwheel: false,
+	//         scrollwheel: false,
 
-	        styles: [{
-	            featureType: 'all',
-	            stylers: [{
-	                saturation: -65
-	            }]
-	        }, {
-	            featureType: 'road.arterial',
-	            elementType: 'geometry',
-	            stylers: [{
-	                hue: '#00ffee'
-	            }, {
-	                saturation: 80
-	            }]
-	        }, {
-	            featureType: 'poi.business',
-	            elementType: 'labels',
-	            stylers: [{
-	                visibility: 'off'
-	            }]
-	        }]
-	    };
+	//         styles: [{
+	//             featureType: 'all',
+	//             stylers: [{
+	//                 saturation: -65
+	//             }]
+	//         }, {
+	//             featureType: 'road.arterial',
+	//             elementType: 'geometry',
+	//             stylers: [{
+	//                 hue: '#00ffee'
+	//             }, {
+	//                 saturation: 80
+	//             }]
+	//         }, {
+	//             featureType: 'poi.business',
+	//             elementType: 'labels',
+	//             stylers: [{
+	//                 visibility: 'off'
+	//             }]
+	//         }]
+	//     };
 
-	    var mapElement = document.getElementById('map');
+	//     var mapElement = document.getElementById('map');
 
-	    var map = new google.maps.Map(mapElement, mapOptions);
+	//     var map = new google.maps.Map(mapElement, mapOptions);
 
-	    var image = 'images/map-marker.png';
+	//     var image = 'images/map-marker.png';
 
-	    var marker = new google.maps.Marker({
-	        position: new google.maps.LatLng(26.706335, 83.446500),
-	        map: map,
-	        icon: image,
-	        draggable: true,
-	        animation: google.maps.Animation.DROP
-	    });
-	    marker.addListener('click', toggleBounce);
+	//     var marker = new google.maps.Marker({
+	//         position: new google.maps.LatLng(26.706335, 83.446500),
+	//         map: map,
+	//         icon: image,
+	//         draggable: true,
+	//         animation: google.maps.Animation.DROP
+	//     });
+	//     marker.addListener('click', toggleBounce);
 
-	    function toggleBounce() {
-	        if (marker.getAnimation() !== null) {
-	            marker.setAnimation(null);
-	        } else {
-	            marker.setAnimation(google.maps.Animation.BOUNCE);
-	        }
-	    }
-	}
+	//     function toggleBounce() {
+	//         if (marker.getAnimation() !== null) {
+	//             marker.setAnimation(null);
+	//         } else {
+	//             marker.setAnimation(google.maps.Animation.BOUNCE);
+	//         }
+	//     }
+	// }
 })(jQuery);
