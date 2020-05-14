@@ -27,20 +27,32 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
     <link rel="stylesheet" href="css/plugins.min.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/textrolling.css" type="text/css" media="screen" />
+    <!-- <link rel="stylesheet" href="css/bubblecard.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" type="text/css"> -->
+    <!-- <link rel="stylesheet" href="css/darkmode.css" type="text/css" media="screen" /> -->
+    <!-- <link rel="stylesheet" href="css/loginbox.css" type="text/css" media="screen"/> -->
+    <!-- <link rel="stylesheet" href="css/imageslider.css" type="text/css" media="screen"/> -->
+    <!-- <link rel="stylesheet" href="css/foldingcard.css" type="text/css" media="screen"/> -->
 </head>
 
 <body>
+    <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v7.0"></script>
+
+            
     <div class="preloader">
         <div class="anim pulse"><i class="ion-ios-bolt-outline"></i></div>
     </div>
     <div class="preloader-left"></div>
     <div class="preloader-right"></div>
+
     <div class="inline-menu-container">
-    	<span class="status">Updated 15 Sep 2019.</span>
+    	<span class="status">Under Development</span>
         <ul class="inline-menu">
             <li class="about menu-item">Resume</li>
             <li class="portfolio menu-item">Portfolio</li>
-            <li class="blog menu-item">Blog</li>
+            <li class="blog menu-item">Article</li>
             <li class="contact menu-item">Contact</li>
             <li id="close" class="menu-item"><i class="ion-ios-close-empty"></i></li>
         </ul>
@@ -49,7 +61,7 @@
     <section class="home" style="background: url(images/bg/gradient-bg.jpg) #333 40% 40%;">
       <div class="bgScroll"></div>
       <!-- <div class="overlay opacity7"></div> -->
-    	<div class="gradient-overlay1 opacity7"></div>
+    	<div class="gradient-overlay2 opacity8"></div>
         <div class="container">
             <div class="name-block">
                 <div class="name-block-container">
@@ -59,19 +71,18 @@
     <source src="./song.mp3" />
     Your browser doesn't support &lt;audio&gt; element.
   </audio>
-</div>
-<!--                     <h1><span>Hi, I'm the one you were searching🧐 for,</span>Abhishek</h1> -->
+</div>       
                     <h1><span>Best viewed in desktop view💻</span></h1>
                     <h1><span>Hi, I'm</span>Abhishek</h1>
-<!--                     <h1><span>The one you know...😎</span></h1> -->
                     <h2 id="element"></h2>
-                    <a  class="btn btn-download" href="https://resume.coderaky.com" target="_blank">R E S U M E</a>
+                    <a  class="btn btn-download" href="./coderaky_resume.pdf" target="_blank">R E S U M E</a>
+                   
                     <ul class="social">
-                        <li><a href="https://www.facebook.com/coderaky" target="_blank" ><i class="ion-social-facebook"></i></a></li>
-                        <li><a href="https://wa.me/919453457386" target="_blank" ><i class="ion-social-whatsapp"></i></a></li>
                         <li><a href="https://www.linkedin.com/in/coderaky" target="_blank" ><i class="ion-social-linkedin"></i></a></li>
-                        <li><a href="https://www.instagram.com/coderaky" target="_blank" ><i class="ion-social-instagram"></i></a></li>
                         <li><a href="https://github.com/coderaky" target="_blank" ><i class="ion-social-github"></i></a></li>
+                        <li><a href="https://www.facebook.com/coderaky" target="_blank" ><i class="ion-social-facebook"></i></a></li>
+                        <li><a href="https://www.instagram.com/coderaky" target="_blank" ><i class="ion-social-instagram"></i></a></li>
+                        <li><a href="https://www.youtube.com/channel/UCzwdFPzMyhgkKxyF9zDw11A" target="_blank" ><i class="ion-social-youtube"></i></a></li>
                         <li><a href="tel:9453457386" target="_blank" ><i class="ion-ios-telephone"></i></a></li>
                     </ul>
                 </div>
@@ -89,7 +100,7 @@
                 </div>
                 <div class="blog-block  menu-block">
                     <div class="blog-block-container">
-                        <h2 class="blog menu-item">Blog</h2>
+                        <h2 class="blog menu-item">Article</h2>
                     </div>
                 </div>
                 <div class="contact-block  menu-block">
@@ -101,48 +112,155 @@
             <div class="content-blocks about">
                 <section class="content" id="about">
                     <div class="block-content">
-                        <h3 class="block-title">Profile</h3>
-                        <h3 class="subheading">Hey,<br>Guess🤔 what coderaky means ❓❓<br> Ya, You guessed it right ✔ <br>It's (coder Abhishek Kumar Yadav).</h3>
-                        <p>Hi,   My name is Abhishek Kumar Yadav. And I love to spend my most of the time behind my lappi. Currently, I am pursuing my bachelor’s degree in Computer Science and Engineering from Madan Mohan Malaviya University of Technology, Gorakhpur and I have a huge interest in programming and problem-solving.</p>
+
+                        <!--
+                            Darkmode under work...
+                            <main class="card">
+                            <header class="card__header header">
+                              <label class="header__selection toggle">
+                                <input js-toggle class="toggle__input" aria-label="toggle dark mode" type="checkbox">
+                                <span class="toggle__fake"></span>
+                                <h1 class="toggle__text">Dark Mode</h1>
+                              </label>
+                            </header>
+                            <section class="card__body body">
+                              <p class="body__text">The <code>prefers-color-scheme</code> CSS 5 Media Query is used to detect if the user has requested the system to use a light or dark color theme. This Pen demonstrates how to use a theme toggle for both legacy and progressive code. Check <a target="_blank" rel="noopener" href="//caniuse.com/#feat=prefers-color-scheme" aria-label="Can I Use Website">Caniuse</a> for support.</p>
+                              <p class="body__text">If the theme is overwriten by the toggle, it will be persisted via local storage; else the media query will keep that setting. Press the following button to clear that storage.</p>
+                            </section>
+                            <section class="card__body card__body--right body">
+                              <button type="button" js-clearStorage>Clear Local Storage</button>
+                            </section>
+                          </main> -->
+
+                        <div class="fb-like" data-href="https://coderaky.com" data-width="" data-layout="standard" data-action="like" data-size="large" data-share="true"></div> <ul></ul>
+                        <h3 class="block-title">Intro</i></h3>
+
+                        <div class="text">
+                            <p> &nbsp;</p>
+                            </span>
+                              <span class="word wisteria">Code.</i>
+                          </span>
+                              <span class="word midnight">Coffee ☕</span>
+                              <span class="word belize">Music.</span>
+                              <span class="word pomegranate">Code.</span>
+                              <span class="word green">Coffee ☕</span>
+                              <span class="word belize">Music.</span>
+                            <span class="word wisteria">Code.</span>
+                              <span class="word midnight">Coffee ☕</span>
+                              <span class="word pomegranate">Music.</span>
+                              <span class="word green">Code.</span>
+                              <span class="word belize">Coffee ☕</span>
+                               
+                              <span class="word wisteria">Music.</span>
+                              <span class="word pomegranate">Code.</span>
+                             
+                              <span class="word green">Coffee ☕</span>
+                              <span class="word midnight">Music.</span
+                            </p>
+                          </div>
+
+
+                        <h3 class="subheading">Coderaky<span class='abc'>.</span><br>Love for </h3>
+                        <p>Hey, My Name is Abhishek Kumar Yadav.<br>Currently, I am pursuing my bachelor’s degree in Computer Science and Engineering from Madan Mohan Malaviya University of Technology, Gorakhpur and I have a huge interest in programming and problem-solving.
+                            Further, I love to develop and Design new and creative stuffs.
+                        </p>
+
+                        
+
+
                         <div class="info-list row">
                             <div class="col-sm-6"><span>Name : </span> Abhishek Kumar Yadav</div>
-                            <div class="col-sm-6"><span>Birthday : </span> 9 September </div>
                             <div class="col-sm-6"><span>Handle : </span> coderaky </div>
-                            <div class="col-sm-6"><span>Nick Name : </span> Golu </div>
-                            <div class="col-sm-6"><span>Address : </span> Khorabhar, Gorakhpur, India.</div>
+                            <div class="col-sm-6"><span>Phone : </span> <a href="tel:9453457386" target="_blank">9453457386 </a></div>
                             <div class="col-sm-6"><span>Email : </span> <a href="mailto:hello@coderaky.com" target="_blank" >hello@coderaky.com</a></div>
-                            <div class="col-sm-6"><span>Phone : </span> <a href="tel:9453457386" target="_blank" >+91 9453457386</a></div>
-                            <div class="col-sm-6"><span>links : </span> <a href="https://hello.coderaky.com" target="_blank" >hello.coderaky.com</a></div>
+                            <div class="col-sm-6"><span>Address : </span> Khorabhar, Gorakhpur, India.</div>
+
                         </div>
                         <img class="sign" src="images/signature.png" alt="" />
                     </div>
+
+
                     <div class="block-content">
+                        <h3 class="block-title">Profile</h3>
+                        <div class="row">
+                            <div class="col-md-4 col-sm-6 service">
+                                <div class="service-icon">
+                                    <a href="https://www.linkedin.com/in/coderaky/"> <img src="images/icons/linkedin.png"></a>                
+                                </div>
+                                <h4>Linkedin</h4>
+                            </div>
+                            <div class="col-md-4 col-sm-6 service">
+                                <div class="service-icon">
+                                    <a href="https://github.com/coderaky"> <img src="images/icons/github.png"></a>
+                                </div>
+                                <h4>Github</h4>
+                            </div>
+                            <div class="col-md-4 col-sm-6 service">
+                                <div class="service-icon">
+                                    <a href="https://codepen.io/coderaky"> <img src="images/icons/codepen.png"></a>
+                                </div>
+                                <h4>Codepen</h4>
+                            </div>
+                            <div class="col-md-4 col-sm-6 service">
+                                <div class="service-icon">
+                                    <a href="https://www.hackerrank.com/coder_aky"> <img src="images/icons/Hackerrank.png"></a>
+                                </div>
+                                <h4>Hackerrank</h4>
+                            </div>
+                            <div class="col-md-4 col-sm-6 service">
+                                <div class="service-icon">
+                                    <a href="https://leetcode.com/coderaky/"> <img src="images/icons/leetcode.png"></a>
+                                </div>
+                                <h4>Leetcode</h4>
+                            </div>
+                            <div class="col-md-4 col-sm-6 service">
+                                <div class="service-icon">
+                                    <a href="https://auth.geeksforgeeks.org/user/coderaky/"> <img src="images/icons/geeksforgeeks.png"></a>
+                                </div>
+                                <h4>Geeks for geeks</h4>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    <div class="block-content">
+
                         <h3 class="block-title">Skills</h3>
-                        <label class="progress-bar-label"> Digital Marketing <span></span></label>
-                        <div class="progress">
+                        <label class="progress-bar-label"> <i class="ion-social-buffer" style="font-size: 40px;"></i> Data Structure & Algorithm <span></span></label>
+                        <ul></ul>
+                        <!-- <div class="progress">
                             <div style="width: 85%;" class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
                                 <span>85%</span>
                             </div>
-                        </div>
-                        <label class="progress-bar-label"> Web Development <span></span></label>
-                        <div class="progress">
+                        </div> -->
+                        <label class="progress-bar-label"> <i class="ion-laptop" style="font-size: 40px;"></i> Web & <i class="ion-android-phone-portrait" style="font-size: 40px;"></i> App Development <span></span></label>
+                        <ul></ul>
+                        <!-- <div class="progress">
                             <div style="width: 80%;" class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
                                 <span>80%</span>
                             </div>
-                        </div>
-                        <label class="progress-bar-label"> Competitive Programming <span></span></label>
-                        <div class="progress">
+                        </div> -->
+                        <label class="progress-bar-label"> <i class="ion-flag" style="font-size: 40px;"></i> Management | <i class="ion-printer" style="font-size: 40px;"></i> Digital Marketing <span></span></label>
+                        <ul></ul>
+                        <!-- <div class="progress">
                             <div style="width: 40%;" class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
                                 <span>40%</span>
                             </div>
-                        </div>
-                        <label class="progress-bar-label"> Management <span></span></label>
-                        <div class="progress">
+                        </div> -->
+                        <label class="progress-bar-label"> <i class="ion-code-working" style="font-size: 40px;"></i> Machine Learning | <i class="ion-paintbucket" style="font-size: 40px;"></i> Designing <span></span></label>
+                        <ul></ul>
+                        <!-- <div class="progress">
                             <div style="width: 90%;" class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
                                 <span>90%</span>
                             </div>
-                        </div>
-                        <label class="progress-bar-label"> C++, Python & Java <span></span></label>
+                        </div> -->
+
+
+                        <!-- <label class="progress-bar-label"> C++, Python & Java <span></span></label>
                         <div class="progress">
                             <div style="width: 70%;" class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
                                 <span>70%</span>
@@ -159,8 +277,109 @@
                             <div style="width: 75%;" class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
                                 <span>75%</span>
                             </div>
-                        </div>
+                        </div> -->
+
                     </div>
+
+
+
+
+                    <div class="block-content">
+                        <h3 class="block-title">Technology Stack</h3>
+                        <h4 class="block-title">Languages</h4>
+                        <div class="row techimg">
+                            <div class="col-md-3 col-sm-6 awards">
+                                <img src="images/language/c.png" alt="" style="-webkit-filter: drop-shadow(5px 5px 5px #222); filter: drop-shadow(5px 5px 5px #222);"/>
+                            </div>
+                            <div class="col-md-3 col-sm-6 awards">
+                                <img src="images/language/cpp.png" alt="" style="-webkit-filter: drop-shadow(5px 5px 5px #222); filter: drop-shadow(5px 5px 5px #222);"/>
+                            </div>
+                            <div class="col-md-3 col-sm-6 awards">
+                                <img src="images/language/python.png" alt="" style="-webkit-filter: drop-shadow(5px 5px 5px #222); filter: drop-shadow(5px 5px 5px #222);"/>
+                            </div>
+                            <div class="col-md-3 col-sm-6 awards">
+                                <img src="images/language/java.png" alt="" style="-webkit-filter: drop-shadow(5px 5px 5px #222); filter: drop-shadow(5px 5px 5px #222);"/>
+                            </div>
+                            <div class="col-md-3 col-sm-6 awards">
+                                <img src="images/language/go.png" alt="" style="-webkit-filter: drop-shadow(5px 5px 5px #222); filter: drop-shadow(5px 5px 5px #222);"/>
+                            </div>
+                            <div class="col-md-3 col-sm-6 awards">
+                                <img src="images/language/sql.png" alt="" style="-webkit-filter: drop-shadow(5px 5px 5px #222); filter: drop-shadow(5px 5px 5px #222);"/>
+                            </div>
+                            <div class="col-md-3 col-sm-6 awards">
+                                <img src="images/language/javascript.png" alt="" style="-webkit-filter: drop-shadow(5px 5px 5px #222); filter: drop-shadow(5px 5px 5px #222);"/>
+                            </div>
+                        </div>
+
+                        <h4 class="block-title">Development</h4>
+                        <div class="row techimg">
+                            <div class="col-md-3 col-sm-6 awards">
+                                <img src="images/development/html5.png" alt="" style="-webkit-filter: drop-shadow(5px 5px 5px #222); filter: drop-shadow(5px 5px 5px #222);"/>
+                            </div>
+                            <div class="col-md-3 col-sm-6 awards">
+                                <img src="images/development/css5.png" alt="" style="-webkit-filter: drop-shadow(5px 5px 5px #222); filter: drop-shadow(5px 5px 5px #222);"/>
+                            </div>
+                            <div class="col-md-3 col-sm-6 awards">
+                                <img src="images/development/andrioid studio.png" alt="" style="-webkit-filter: drop-shadow(5px 5px 5px #222); filter: drop-shadow(5px 5px 5px #222);"/>
+                            </div>
+                            <div class="col-md-3 col-sm-6 awards">
+                                <img src="images/icons/github.png" alt="" style="-webkit-filter: drop-shadow(5px 5px 5px #222); filter: drop-shadow(5px 5px 5px #222);"/>
+                            </div>
+                            <div class="col-md-3 col-sm-6 awards">
+                                <img src="images/development/visual-studio-code-insiders-icon.png" alt="" style="-webkit-filter: drop-shadow(5px 5px 5px #222); filter: drop-shadow(5px 5px 5px #222);"/>
+                            </div>
+                            <div class="col-md-3 col-sm-6 awards">
+                                <img src="images/development/node.js.png" alt="" style="-webkit-filter: drop-shadow(5px 5px 5px #222); filter: drop-shadow(5px 5px 5px #222);"/>
+                            </div>
+                            <div class="col-md-3 col-sm-6 awards">
+                                <img src="images/development/ionic.png" alt="" style="-webkit-filter: drop-shadow(5px 5px 5px #222); filter: drop-shadow(5px 5px 5px #222);"/>
+                            </div>
+                            <div class="col-md-3 col-sm-6 awards">
+                                <img src="images/development/firebase.png" alt="" style="-webkit-filter: drop-shadow(5px 5px 5px #222); filter: drop-shadow(5px 5px 5px #222);"/>
+                            </div>
+                            <div class="col-md-3 col-sm-6 awards">
+                                <img src="images/development/flutter.png" alt="" style="-webkit-filter: drop-shadow(5px 5px 5px #222); filter: drop-shadow(5px 5px 5px #222);"/>
+                            </div>
+                            <div class="col-md-3 col-sm-6 awards">
+                                <img src="images/development/anaconda.png" alt="" style="-webkit-filter: drop-shadow(5px 5px 5px #222); filter: drop-shadow(5px 5px 5px #222);"/>
+                            </div>
+                            <div class="col-md-3 col-sm-6 awards">
+                                <img src="images/development/react.png" alt="" style="-webkit-filter: drop-shadow(5px 5px 5px #222); filter: drop-shadow(5px 5px 5px #222);"/>
+                            </div>
+                            <div class="col-md-3 col-sm-6 awards">
+                                <img src="images/development/git.png" alt="" style="-webkit-filter: drop-shadow(5px 5px 5px #222); filter: drop-shadow(5px 5px 5px #222);"/>
+                            </div>
+                        </div>
+
+                        <h4 class="block-title">Design</h4>
+                        <div class="row techimg">
+                            <div class="col-md-3 col-sm-6 awards">
+                                <img src="images/design/figma.png" alt="" style="-webkit-filter: drop-shadow(5px 5px 5px #222); filter: drop-shadow(5px 5px 5px #222);"/>
+                            </div>
+                            <div class="col-md-3 col-sm-6 awards">
+                                <img src="images/design/sketch.png" alt="" style="-webkit-filter: drop-shadow(5px 5px 5px #222); filter: drop-shadow(5px 5px 5px #222);"/>
+                            </div>
+                            <div class="col-md-3 col-sm-6 awards">
+                                <img src="images/design/photoshop.png" alt="" style="-webkit-filter: drop-shadow(5px 5px 5px #222); filter: drop-shadow(5px 5px 5px #222);"/>
+                            </div>
+                            <div class="col-md-3 col-sm-6 awards">
+                                <img src="images/design/illustrator.png" alt="" style="-webkit-filter: drop-shadow(5px 5px 5px #222); filter: drop-shadow(5px 5px 5px #222);"/>
+                            </div>
+                            <div class="col-md-3 col-sm-6 awards">
+                                <img src="images/design/office.png" alt="" style="-webkit-filter: drop-shadow(5px 5px 5px #222); filter: drop-shadow(5px 5px 5px #222);"/>
+                            </div>
+                            <div class="col-md-3 col-sm-6 awards">
+                                <img src="images/design/filmora.png" alt="" style="-webkit-filter: drop-shadow(5px 5px 5px #222); filter: drop-shadow(5px 5px 5px #222);"/>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+
+
+
 
                     <div class="block-content">
                         <h3 class="block-title">Education</h3>
@@ -173,8 +392,8 @@
                                                 <h4>B.Tech in Computer Science and Engineering |<span>Madan Mohan Malaviya University of Technology</span></h4>
                                                 <h5>2018 - 2022</h5>
                                             </div>
-                                            <p><strong>• Executive Member : IEEE Collegiate Club, MMMUT</strong><br> Feb 2019 – Present 8 mos</p>
-                                            <p><strong>• Executive Member : Robotics Club, MMMUT</strong><br> Apr 2019 – Present 6 mos</p>
+                                            <p><strong>• Executive Member : IEEE Collegiate Club, MMMUT</strong><br> Feb 2019 – Present</p>
+                                            <p><strong>• Executive Member : Robotics Club, MMMUT</strong><br> Apr 2019 – Present </p>
                                         </div>
                                         <div class="exp">
                                             <div class="hgroup">
@@ -213,14 +432,32 @@
                                                 <h4><span>Student Partner</span> @ Internshala</h4>
                                                 <h5>July 2019 - <span class="current">Present</span></h5>
                                             </div>
-                                            <p>• Currently, The Face of Internshala on my Campus.<br>• Spread awareness about Internshala Platform ( training and internship platform) among students.</p>
+                                            <p>• Made more than 100+ signup & 20+ internshala training enrollment on the internshala platform.<br>• Got T-shirt, 3.5k cash, free Data Science course, 
+                                                <a href="https://internshala.com/download_certificate/download/257978/3E367A2F-F5C4-7610-F6CE-43979D8661E1" target="_blank">certificates</a> and
+                                                <a href="https://internshala.com/download_certificate/download/257301/6520FA28-37EA-CED0-55E1-C9D3E4C4E562" target="_blank">recommendation letter</a>  for being 27/10000+ internshala student partners.
+                                                <br>• Spread awareness about the Internshala Platform ( training and internship platform) among students through seminars.</p>
                                         </div>
                                         <div class="exp">
                                             <div class="hgroup">
-                                                <h4><span>Student Volunteer</span> @ National Service Scheme</h4>
+                                                <h4><span>Learning Weekend Organiser</span> @ Progate</h4>
                                                 <h5>May 2018 - <span class="current">Present</span></h5>
                                             </div>
-                                            <p>• We as student volunteers, work in rural areas, adopted villages and school to the <br>serving the cause of society through survey, education and health awareness program.</p>
+                                            <p>• Organized Progate Learning Weekend (3 days online contest 10/04/2020 - 12/04/2020) on my campus. <br>• Almost 150 students took part in this fully online event and learned skills like Python and JS.
+                                                <br>• And Got certificate of <a href="https://drive.google.com/open?id=1Riuis8r5NA2NhxPYAiOviN5Yatfou_64" target="_blank">appreciation.</a></p>
+                                        </div>
+                                        <div class="exp">
+                                            <div class="hgroup">
+                                                <h4><span>Article writer</span> @ Medium</h4>
+                                                <h5>May 2020 - <span class="current">Present</span></h5>
+                                            </div>
+                                            <p>• <a href="https://medium.com/@coderaky" target="_blank">Read Articles</a></p>
+                                        </div>
+                                        <div class="exp">
+                                            <div class="hgroup">
+                                                <h4><span>Content creater</span> @ Youtube</h4>
+                                                <h5>May 2020 - <span class="current">Present</span></h5>
+                                            </div>
+                                            <p>• <a href="https://www.youtube.com/channel/UCzwdFPzMyhgkKxyF9zDw11A" target="_blank">Watch vedios</a></p>
                                         </div>
                                         <div class="exp">
                                             <div class="hgroup">
@@ -248,7 +485,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="block-content">
+
+                    
+                    <!-- <div class="block-content">
                         <h3 class="block-title">What can I do for You 🔨</h3>
                         <div class="row">
                             <div class="col-md-4 col-sm-6 service">
@@ -294,42 +533,44 @@
                                 <p>Data Entry, Excel, Data Processing, Web Search...</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="block-content">
+                    </div> -->
+
+
+                    <!-- <div class="block-content">
                         <h3 class="block-title">Quote</h3>
                         <h3 style="color:grey;">"If you want something you never had you have to do something you have never did."</h3>
 
-                    </div>
+                    </div> -->
                     <div class="block-content">
                         <h3 class="block-title">What Friends says🤗</h3>
                         <div class="row">
                             <div id="liontestimonial" class="owl-carousel owl-theme">
                                 <div class="item testimonials">
-                                    <img src="images/testimonials/Anuranjan.jpg" alt="">
+                                    <!-- <img src="images/testimonials/Anuranjan.jpg" alt=""> -->
                                     <blockquote>He is a true friend of mine always supported me in tough times. Whenever there is a problem whether it is technical or some social issue the first name which comes to my mind is Abhishek Kumar Yadav.
                                         <p class="quote"><span>Anuranjan Srivastava</span></p>
                                     </blockquote>
                                 </div>
                                 <div class="item testimonials">
-                                    <img src="images/testimonials/Avi.jpg" alt="">
+                                    <!-- <img src="images/testimonials/Avi.jpg" alt=""> -->
                                     <blockquote>I think abhishek kumar yadav is a young and rising coder of MMMUT. He has potential to became a good coder as well as successful developer. He always come up with awesome ideas for projects.
                                         <p class="quote"><span>Avi Srivastava</span></p>
                                     </blockquote>
                                 </div>
                                 <div class="item testimonials">
-                                    <img src="images/testimonials/Abhinav.jpg" alt="">
+                                    <!-- <img src="images/testimonials/Abhinav.jpg" alt=""> -->
                                     <blockquote>I know him since class 10th. Whenever I discuss a technology with him usually I learn a lot of things. The thing I would like to learn from him is patience and never give up attitude.
                                         <p class="quote"><span>Abhinav Maurya</span></p>
                                     </blockquote>
                                 </div>
                                <div class="item testimonials">
-                                    <img src="images/testimonials/Ayush.jpg" alt="">
+                                    <!-- <img src="images/testimonials/Ayush.jpg" alt=""> -->
                                     <blockquote>Abhishek is a enthusiastic boy with great knowledge of languages and always forward toward solving problem. I am blessed to have a friend like coderaky.
                                         <p class="quote"><span>Ayush Srivastava</span></p>
                                     </blockquote>
                                 </div>
                                 <div class="item testimonials">
-                                    <img src="images/testimonials/Adarsh.jpg" alt="">
+                                    <!-- <img src="images/testimonials/Adarsh.jpg" alt=""> -->
                                     <blockquote>Din Raat Pdhata h par batata nhi h ki kya kar rha hai aur kya nhi. But kuch bhi ho vo Mera Bhai Hain, Cute Turtle Bhai.
                                         <p class="quote"><span>Adarsh Srivastava</span></p>
                                     </blockquote>
@@ -337,10 +578,9 @@
                             </div>
                         </div>
                     </div>
-                    <h3 class="block-title">Let's start a project together, do not hesitate to contact me</h3>
                     <div class="row text-center">
                         <div class="col-md-12 btn-email">
-                            <a class="btn lowercase" href="https://hello.coderaky.com" target="_blank">hello.coderaky.com</a>
+                            <a class="btn lowercase" href="mailto:hello@coderaky.com" target="_blank">hello@coderaky.com</a>
                         </div>
                     </div>
                 </section>
@@ -348,16 +588,100 @@
             <div class="content-blocks portfolio">
                 <section class="content">
                     <div class="block-content">
-                        <h3 class="block-title">Portfolio</h3>
+
+                        
+
+
+                        <h3 class="block-title">Projects</h3>
+
+
+                        
+
+
+                    <!-- <div class ="row">
+                        
+                        <div class="col-md-6">
+                            <div username='coderaky' repos='Imago' class='github-card' id='card'></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div username='coderaky' repos='Notitiam' class='github-card' id='card'></div>
+                        </div>
+
+                    </div> -->
+
+                    <div username='coderaky' repos='Imago,Notitiam,Consilio' class='github-card' id='card'></div>
+
+                    <ul></ul>
+                    <a href="https://github.com/coderaky/Imago"><img src="https://github-link-card.s3.ap-northeast-1.amazonaws.com/coderaky/Imago.png" width="460px"></a>
+                    <ul></ul>
+                    <a href="https://github.com/coderaky/Notitiam"><img src="https://github-link-card.s3.ap-northeast-1.amazonaws.com/coderaky/Notitiam.png" width="460px"></a>
+                    <ul></ul>
+                    <a href="https://github.com/coderaky/Consilio"><img src="https://github-link-card.s3.ap-northeast-1.amazonaws.com/coderaky/Consilio.png" width="460px"></a>
+                    <ul></ul>
+
+
+
+
+                          <!-- <div class="card">
+                            <div class="top">
+                                <img src="images/portfolio/strider/hero.jpg" alt="">
+                              <svg viewBox="0 0 100 100">
+                                <path d="m38.977 59.074c0 2.75-4.125 2.75-4.125 0s4.125-2.75 4.125 0"></path>
+                                <path d="m60.477 59.074c0 2.75-4.125 2.75-4.125 0s4.125-2.75 4.125 0"></path>
+                                <path d="m48.203 69.309c1.7344 0 3.1484-1.4141 3.1484-3.1484 0-0.27734-0.22266-0.5-0.5-0.5-0.27734 0-0.5 0.22266-0.5 0.5 0 1.1836-0.96484 2.1484-2.1484 2.1484s-2.1484-0.96484-2.1484-2.1484c0-0.27734-0.22266-0.5-0.5-0.5-0.27734 0-0.5 0.22266-0.5 0.5 0 1.7344 1.4141 3.1484 3.1484 3.1484z"></path>
+                                <path d="m35.492 24.371c0.42187-0.35156 0.48047-0.98438 0.125-1.4062-0.35156-0.42188-0.98438-0.48438-1.4062-0.125-5.1602 4.3047-16.422 17.078-9.5312 42.562 0.21484 0.79688 0.85547 1.4062 1.6641 1.582 0.15625 0.035156 0.31641 0.050781 0.47266 0.050781 0.62891 0 1.2344-0.27344 1.6445-0.76562 0.82812-0.98828 2.0039-1.5391 2.793-1.8203 0.56641 1.6055 1.4766 3.3594 2.9727 4.9414 2.2852 2.4219 5.4336 3.9453 9.3867 4.5547-3.6055 4.5-3.8047 10.219-3.8086 10.484-0.011719 0.55078 0.42187 1.0078 0.97656 1.0234h0.023438c0.53906 0 0.98437-0.42969 1-0.97266 0-0.054688 0.17187-4.8711 2.9805-8.7773 0.63281 1.2852 1.7266 2.5 3.4141 2.5 1.7109 0 2.7578-1.2695 3.3398-2.6172 2.8867 3.9258 3.0586 8.8359 3.0586 8.8906 0.015625 0.54297 0.46094 0.97266 1 0.97266h0.023438c0.55078-0.015625 0.98828-0.47266 0.97656-1.0234-0.007812-0.26953-0.20703-6.0938-3.9141-10.613 7.0781-1.3086 10.406-5.4219 11.969-8.9766 1.0508 0.98828 2.75 2.1992 4.793 2.1992 0.078126 0 0.15625 0 0.23828-0.003906 0.47266-0.023438 1.5781-0.074219 3.4219-4.4219 1.1172-2.6406 2.1406-6.0117 2.8711-9.4922 4.8281-22.945-4.7852-30.457-9.1445-32.621-12.316-6.1172-22.195-3.6055-28.312-0.42188-0.48828 0.25391-0.67969 0.85938-0.42578 1.3477s0.85938 0.67969 1.3477 0.42578c5.7031-2.9688 14.934-5.3047 26.5 0.4375 7.1875 3.5703 9 11.586 9.2539 17.684 0.49609 11.93-4.2617 23.91-5.7344 25.062h-0.015626c-1.832 0-3.4102-1.5742-4.0352-2.2852 0.28906-0.99609 0.44531-1.8672 0.52734-2.5117 0.62891 0.16797 1.2812 0.27344 1.9727 0.27344 0.55469 0 1-0.44922 1-1 0-0.55078-0.44531-1-1-1-7.3203 0-10.703-13.941-10.734-14.082-0.097656-0.40625-0.4375-0.71094-0.85156-0.76172-0.43359-0.050781-0.82031 0.16406-1.0117 0.53906-1.8984 3.7188-1.4297 6.7539-0.67969 8.668-6.2383-2.2852-8.9766-8.6914-9.0078-8.7617-0.17969-0.43359-0.62891-0.68359-1.1016-0.60156-0.46094 0.082032-0.80469 0.47266-0.82422 0.94141-0.14062 3.3359 0.67188 5.75 1.5 7.3164-8.3125-2.4297-10.105-11.457-10.184-11.875-0.097656-0.51562-0.57422-0.86328-1.0898-0.8125-0.51953 0.054687-0.90625 0.50391-0.89062 1.0234 0.41406 13.465-1.8516 17.766-3.2383 19.133-0.66406 0.65625-1.1992 0.67188-1.2383 0.67188-0.53906-0.050781-1.0156 0.31641-1.0938 0.85156-0.078125 0.54688 0.29688 1.0547 0.84375 1.1328 0.03125 0.003906 0.11328 0.015625 0.23828 0.015625 0.36719 0 1.1016-0.09375 1.9414-0.66406 0.050781 0.38672 0.125 0.81641 0.21875 1.2656-1.0273 0.35156-2.6211 1.0781-3.7812 2.4648-0.015625 0.019532-0.054687 0.066406-0.15625 0.046875-0.039062-0.007812-0.13281-0.039062-0.16406-0.15234-2.1875-8.1094-5.7148-28.309 8.8867-40.496zm12.711 51.828c-1.0039 0-1.5898-1.207-1.8672-2.0117 0.48047 0.023438 0.95703 0.050781 1.4531 0.050781 0.74219 0 1.4453-0.035156 2.1289-0.082031-0.24219 0.83594-0.76172 2.043-1.7148 2.043zm-13.148-30.664c1.9531 3.6211 5.6367 7.9102 12.305 8.6992 0.43359 0.046875 0.83984-0.18359 1.0234-0.57422 0.18359-0.39062 0.089844-0.85938-0.22656-1.1523-0.074219-0.070312-1.2734-1.2227-1.9688-3.6367 2 2.6094 5.3359 5.6836 10.305 6.5664 0.42187 0.070312 0.83594-0.125 1.0469-0.49219 0.21094-0.36719 0.16406-0.82812-0.11719-1.1484-0.023437-0.027344-1.9414-2.2969-1.2891-5.8906 1.2227 3.5508 3.7461 9.2227 7.8945 11.551-0.03125 0.55859-0.14844 1.668-0.55078 3.0156-0.085937 0.13672-0.125 0.28516-0.13672 0.44531-1.3008 3.8906-5.0039 9.3281-15.547 9.3281-5.375 0-9.4414-1.418-12.086-4.2109-3.5664-3.7656-3.332-8.8477-3.332-8.8984v-0.011719c1.5898-2.7227 2.5-7.3203 2.6797-13.59z"></path>
+                              </svg>
+                              <div class="social-buttons">
+                                <button><i class="material-icons">camera</i></button>
+                                <button><i class="material-icons">photo_camera</i></button>
+                                <button><i class="material-icons">music_note</i></button>
+                              </div>
+                              <div class="text1">
+                                <div class="name-wrapper">
+                                  <div class="name">Morgan, 22</div><i class="material-icons">check_circle</i>
+                                </div>
+                                <div class="title">Ant Collector</div>
+                              </div>
+                              <button class="like">
+                                <div class="hexagon"><i class="material-icons">favorite</i></div>
+                              </button>
+                            </div>
+                            <div class="bottom">
+                              <div class="desc">Morgan has collected ants since they were six years old and now has many dozen ants but none in their pants.</div>
+                              <div class="buttons">
+                                <button class="like"><i class="material-icons">person</i>
+                                  <div class="height">5'4"</div>
+                                </button>
+                                <button class="status"><i class="material-icons">search</i>
+                                  <div class="height">Marriage</div>
+                                </button>
+                                <button class="horo"><i class="material-icons">share</i>
+                                  <div class="height">Capricorn</div>
+                                </button>
+                              </div>
+                            </div>
+                          </div> -->
+
+
+
+                       <!-- <h3 class="block-title">Design</h3>
+
+
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="filters">
-                                    <span>Will be adding more very Soon...(Since most are still under development😅😅)</span>
-
+                                    <span>Filters :</span>
+                                    <ul id="filters">
+                                        <li class="active" data-filter="*">All</li>
+                                        <li data-filter=".artwork">Art Work</li>
+                                        <li data-filter=".webdesign">Web Design</li>
+                                        <li data-filter=".design">Design</li>
+                                    </ul>
                                 </div>
+
                                 <div class="portfolio-container row isotope" id="portfolio-container">
 
-<!--                                     <div class="col-md-4 col-sm-6 col-xs-12 portfolio-item artwork">
+                                    <div class="col-md-4 col-sm-6 col-xs-12 portfolio-item artwork">
                                         <a class="open-project" href="strider.html">
                                             <div class="portfolio-column">
                                                 <div class="portfolio-hover">
@@ -371,7 +695,7 @@
                                                 <img src="images/portfolio/strider/hero.jpg" alt="">
                                             </div>
                                         </a>
-                                    </div> -->
+                                    </div>
 
                                     <div class="col-md-4 col-sm-6 col-xs-12 portfolio-item artwork">
                                         <a class="open-project" href="repeater.html">
@@ -405,17 +729,244 @@
                                         </a>
                                     </div>
 
+
                                 </div>
                             </div>
+                        </div> -->
+
+                        <ul></ul>
+
+
+                        <!-- <div class="card">
+                            <div class="top">
+                                <img src="images/portfolio/strider/hero.jpg" alt="">
+                              <svg viewBox="0 0 100 100">
+                                <path d="m38.977 59.074c0 2.75-4.125 2.75-4.125 0s4.125-2.75 4.125 0"></path>
+                                <path d="m60.477 59.074c0 2.75-4.125 2.75-4.125 0s4.125-2.75 4.125 0"></path>
+                                <path d="m48.203 69.309c1.7344 0 3.1484-1.4141 3.1484-3.1484 0-0.27734-0.22266-0.5-0.5-0.5-0.27734 0-0.5 0.22266-0.5 0.5 0 1.1836-0.96484 2.1484-2.1484 2.1484s-2.1484-0.96484-2.1484-2.1484c0-0.27734-0.22266-0.5-0.5-0.5-0.27734 0-0.5 0.22266-0.5 0.5 0 1.7344 1.4141 3.1484 3.1484 3.1484z"></path>
+                                <path d="m35.492 24.371c0.42187-0.35156 0.48047-0.98438 0.125-1.4062-0.35156-0.42188-0.98438-0.48438-1.4062-0.125-5.1602 4.3047-16.422 17.078-9.5312 42.562 0.21484 0.79688 0.85547 1.4062 1.6641 1.582 0.15625 0.035156 0.31641 0.050781 0.47266 0.050781 0.62891 0 1.2344-0.27344 1.6445-0.76562 0.82812-0.98828 2.0039-1.5391 2.793-1.8203 0.56641 1.6055 1.4766 3.3594 2.9727 4.9414 2.2852 2.4219 5.4336 3.9453 9.3867 4.5547-3.6055 4.5-3.8047 10.219-3.8086 10.484-0.011719 0.55078 0.42187 1.0078 0.97656 1.0234h0.023438c0.53906 0 0.98437-0.42969 1-0.97266 0-0.054688 0.17187-4.8711 2.9805-8.7773 0.63281 1.2852 1.7266 2.5 3.4141 2.5 1.7109 0 2.7578-1.2695 3.3398-2.6172 2.8867 3.9258 3.0586 8.8359 3.0586 8.8906 0.015625 0.54297 0.46094 0.97266 1 0.97266h0.023438c0.55078-0.015625 0.98828-0.47266 0.97656-1.0234-0.007812-0.26953-0.20703-6.0938-3.9141-10.613 7.0781-1.3086 10.406-5.4219 11.969-8.9766 1.0508 0.98828 2.75 2.1992 4.793 2.1992 0.078126 0 0.15625 0 0.23828-0.003906 0.47266-0.023438 1.5781-0.074219 3.4219-4.4219 1.1172-2.6406 2.1406-6.0117 2.8711-9.4922 4.8281-22.945-4.7852-30.457-9.1445-32.621-12.316-6.1172-22.195-3.6055-28.312-0.42188-0.48828 0.25391-0.67969 0.85938-0.42578 1.3477s0.85938 0.67969 1.3477 0.42578c5.7031-2.9688 14.934-5.3047 26.5 0.4375 7.1875 3.5703 9 11.586 9.2539 17.684 0.49609 11.93-4.2617 23.91-5.7344 25.062h-0.015626c-1.832 0-3.4102-1.5742-4.0352-2.2852 0.28906-0.99609 0.44531-1.8672 0.52734-2.5117 0.62891 0.16797 1.2812 0.27344 1.9727 0.27344 0.55469 0 1-0.44922 1-1 0-0.55078-0.44531-1-1-1-7.3203 0-10.703-13.941-10.734-14.082-0.097656-0.40625-0.4375-0.71094-0.85156-0.76172-0.43359-0.050781-0.82031 0.16406-1.0117 0.53906-1.8984 3.7188-1.4297 6.7539-0.67969 8.668-6.2383-2.2852-8.9766-8.6914-9.0078-8.7617-0.17969-0.43359-0.62891-0.68359-1.1016-0.60156-0.46094 0.082032-0.80469 0.47266-0.82422 0.94141-0.14062 3.3359 0.67188 5.75 1.5 7.3164-8.3125-2.4297-10.105-11.457-10.184-11.875-0.097656-0.51562-0.57422-0.86328-1.0898-0.8125-0.51953 0.054687-0.90625 0.50391-0.89062 1.0234 0.41406 13.465-1.8516 17.766-3.2383 19.133-0.66406 0.65625-1.1992 0.67188-1.2383 0.67188-0.53906-0.050781-1.0156 0.31641-1.0938 0.85156-0.078125 0.54688 0.29688 1.0547 0.84375 1.1328 0.03125 0.003906 0.11328 0.015625 0.23828 0.015625 0.36719 0 1.1016-0.09375 1.9414-0.66406 0.050781 0.38672 0.125 0.81641 0.21875 1.2656-1.0273 0.35156-2.6211 1.0781-3.7812 2.4648-0.015625 0.019532-0.054687 0.066406-0.15625 0.046875-0.039062-0.007812-0.13281-0.039062-0.16406-0.15234-2.1875-8.1094-5.7148-28.309 8.8867-40.496zm12.711 51.828c-1.0039 0-1.5898-1.207-1.8672-2.0117 0.48047 0.023438 0.95703 0.050781 1.4531 0.050781 0.74219 0 1.4453-0.035156 2.1289-0.082031-0.24219 0.83594-0.76172 2.043-1.7148 2.043zm-13.148-30.664c1.9531 3.6211 5.6367 7.9102 12.305 8.6992 0.43359 0.046875 0.83984-0.18359 1.0234-0.57422 0.18359-0.39062 0.089844-0.85938-0.22656-1.1523-0.074219-0.070312-1.2734-1.2227-1.9688-3.6367 2 2.6094 5.3359 5.6836 10.305 6.5664 0.42187 0.070312 0.83594-0.125 1.0469-0.49219 0.21094-0.36719 0.16406-0.82812-0.11719-1.1484-0.023437-0.027344-1.9414-2.2969-1.2891-5.8906 1.2227 3.5508 3.7461 9.2227 7.8945 11.551-0.03125 0.55859-0.14844 1.668-0.55078 3.0156-0.085937 0.13672-0.125 0.28516-0.13672 0.44531-1.3008 3.8906-5.0039 9.3281-15.547 9.3281-5.375 0-9.4414-1.418-12.086-4.2109-3.5664-3.7656-3.332-8.8477-3.332-8.8984v-0.011719c1.5898-2.7227 2.5-7.3203 2.6797-13.59z"></path>
+                              </svg>
+                              <div class="social-buttons">
+                                <button><i class="material-icons">camera</i></button>
+                                <button><i class="material-icons">photo_camera</i></button>
+                                <button><i class="material-icons">music_note</i></button>
+                              </div>
+                              <div class="text1">
+                                <div class="name-wrapper">
+                                  <div class="name">Morgan, 22</div><i class="material-icons">check_circle</i>
+                                </div>
+                                <div class="title">Ant Collector</div>
+                              </div>
+                              <button class="like">
+                                <div class="hexagon"><i class="material-icons">favorite</i></div>
+                              </button>
+                            </div>
+                            <div class="bottom">
+                              <div class="desc">Morgan has collected ants since they were six years old and now has many dozen ants but none in their pants.</div>
+                              <div class="buttons">
+                                <button class="like"><i class="material-icons">person</i>
+                                  <div class="height">5'4"</div>
+                                </button>
+                                <button class="status"><i class="material-icons">search</i>
+                                  <div class="height">Marriage</div>
+                                </button>
+                                <button class="horo"><i class="material-icons">share</i>
+                                  <div class="height">Capricorn</div>
+                                </button>
+                              </div>
+                            </div>
+                          </div> -->
+
+
+
+
+                        <h3 class="block-title">Certification</h3>
+
+
+                        <div class="author-box row">
+                            <div class="col-sm-2">
+                                <img src="images/organisation/google.png" class="rounded-circle" alt="..." />
+                            </div>
+                            <div class="col-sm-10">
+                                <h3>Fundamentals of Digital Marketing <span> | Google</span></h3>
+                                <p>Credential ID ID V43 Q4C JBB 
+                                    <br><a href="https://learndigital.withgoogle.com/digitalgarage/validate-certificate-code">See credential</a></p>
+                            </div>
                         </div>
+
+                        <div class="author-box row">
+                            <div class="col-sm-2">
+                                <img src="images/organisation/microsoft.png" class="rounded-circle" alt="..." />
+                            </div>
+                            <div class="col-sm-10">
+                                <h3>SQL Database Fundamental <span> | Microsoft</span></h3>
+                                <p><a href="https://drive.google.com/open?id=17zZyiADFO7ZbVvRxQKuVurS6mrPurecN">See credential</a></p>
+                            </div>
+                        </div>
+
+                        <div class="author-box row">
+                            <div class="col-sm-2">
+                                <img src="images/organisation/freecodecamp.png" class="rounded-circle" alt="..." />
+                            </div>
+                            <div class="col-sm-10">
+                                <h3>Responsive Web Design <span> | Freecodecamp</span></h3>
+                                <p> <a href="https://www.freecodecamp.org/certification/coderaky/responsive-web-design">See credential</a></p>
+                            </div>
+                        </div>
+
+                        <div class="author-box row">
+                            <div class="col-sm-2">
+                                <img src="images/organisation/udemy.png" class="rounded-circle" alt="..." />
+                            </div>
+                            <div class="col-sm-10">
+                                <h3>Illustrator cc 2020 <span> | Udemy</span></h3>
+                                <p>Credential ID UC-01024f22-a293-47f9-a314-eaf0384ad55f 
+                                    <br><a href="http://ude.my/UC-01024f22-a293-47f9-a314-eaf0384ad55f">See credential</a></p>
+                            </div>
+                        </div>
+
+                        <div class="author-box row">
+                            <div class="col-sm-2">
+                                <img src="images/organisation/alison.png" class="rounded-circle" alt="..." />
+                            </div>
+                            <div class="col-sm-10">
+                                <h3>Abode Photoshop<span> | Alison</span></h3>
+                                <p>Credential ID AC-542-13650454 
+                                    <br><a href="https://alison.com/certification/check/%242y%2410%24cUsLKsSnitxDOTEUBDos6O5znyc.3..FVIxHLtTFDo8vi6knTapu">See credential</a></p>
+                            </div>
+                        </div>
+
+                        <div class="author-box row">
+                            <div class="col-sm-2">
+                                <img src="images/organisation/hubspot.png" class="rounded-circle" alt="..." />
+                            </div>
+                            <div class="col-sm-10">
+                                <h3>Inbound Marketing <span> | hubspot</span></h3>
+                                <p>Credential ID 1560866346229
+                                    <br><a href="https://hubspot-academy.s3.amazonaws.com/prod/tracks/user-certificates/24-8214712-1560866346229.png">See credential</a></p>
+                            </div>
+                        </div>
+
+                        <div class="author-box row">
+                            <div class="col-sm-2">
+                                <img src="images/organisation/guvi.png" class="rounded-circle" alt="..." />
+                            </div>
+                            <div class="col-sm-10">
+                                <h3>Azure <span> | Guvi</span></h3>
+                                <p>Credential ID 843i58R6Q9n543519X 
+                                    <br><a href="https://www.guvi.in/certificate.html?id=843i58R6Q9n543519X">See credential</a></p>
+                            </div>
+                        </div>
+
+                        <div class="author-box row">
+                            <div class="col-sm-2">
+                                <img src="images/organisation/internshala.png" class="rounded-circle" alt="..." />
+                            </div>
+                            <div class="col-sm-10">
+                                <h3>Data Science <span> | Internshala</span></h3>
+                                <p>Credential ID 42452F05-67D1-1C5C-DD65-B87163CF02D2 
+                                    <br><a href="https://trainings.internshala.com/verify_certificate">See credential</a></p>
+                            </div>
+                        </div>
+
+                        <div class="author-box row">
+                            <div class="col-sm-2">
+                                <img src="images/organisation/365datascience.png" class="rounded-circle" alt="..." />
+                            </div>
+                            <div class="col-sm-10">
+                                <h3>Intro to Data and Data Science <span> | 365 data Science</span></h3>
+                                <p>Credential ID 6tk0pw1q 
+                                    <br><a href="https://drive.google.com/open?id=1l4-eJKPnQgL9IpmM24t95g28WSE3saxW">See credential</a></p>
+                            </div>
+                        </div>
+
+                        <div class="author-box row">
+                            <div class="col-sm-2">
+                                <img src="images/organisation/Progate.png" class="rounded-circle" alt="..." />
+                            </div>
+                            <div class="col-sm-10">
+                                <h3>Python and Javascript <span> | Progate</span></h3>
+                                <p> <a href="https://drive.google.com/open?id=1uee_g1jyPVQYQzmW_rNWNzEFfYMqxNRL">See credential</a></p>
+                            </div>
+                        </div>
+
+                        <div class="author-box row">
+                            <div class="col-sm-2">
+                                <img src="images/organisation/bitdegree.png" class="rounded-circle" alt="..." />
+                            </div>
+                            <div class="col-sm-10">
+                                <h3>Sketch for begineers <span> | BitDegree</span></h3>
+                                <p>Credential ID-1904825 
+                                    <br><a href="https://www.bitdegree.org/api/certificate?slug=sketch-tutorial&action=attachment&username=coderaky">See credential</a></p>
+                            </div>
+                        </div>
+
+                        <div class="author-box row">
+                            <div class="col-sm-2">
+                                <img src="images/organisation/365datascience.png" class="rounded-circle" alt="..." />
+                            </div>
+                            <div class="col-sm-10">
+                                <h3>Typing Speed (62 wpm) <span> | Typing.com</span></h3>
+                                <p>Credential ID 126762954-105892838 
+                                    <br><a href="https://www.typing.com/student/verify#126762954-105892838">See credential</a></p>
+                            </div>
+                        </div>
+
+                        <div class="author-box row">
+                            <div class="col-sm-2">
+                                <img src="images/icons/linkedin.png" class="rounded-circle" alt="..." />
+                            </div>
+                            <div class="col-sm-10">
+                                <h3>Remote Work Foundation<span> | Linkedin Learning</span></h3>
+                                <p>Credential ID AX8_dnApW1PNWv_gcfnMLEnxN8gv 
+                                    <br><a href="https://drive.google.com/open?id=1l4-eJKPnQgL9IpmM24t95g28WSE3saxW">See credential</a></p>
+                            </div>
+                        </div>
+
+                        <!-- <h3 class="block-title">Spcilization</h3>
+
+                        <div>
+                            <ul class="slider">
+                                <li>
+                                    <input type="radio" id="slide1" name="slide" checked>
+                                    <label for="slide1"></label>
+                                    <img src="https://dribbble.s3.amazonaws.com/users/322/screenshots/872485/coldchase.jpg" alt="Panel 1">
+                                </li>
+                                <li>
+                                    <input type="radio" id="slide2" name="slide">
+                                    <label for="slide2"></label>
+                                    <img src="https://dribbble.s3.amazonaws.com/users/322/screenshots/980517/icehut_sm.jpg" alt="Panel 2">
+                                </li>
+                                <li>
+                                    <input type="radio" id="slide3" name="slide">
+                                    <label for="slide3"></label>
+                                    <img src="https://dribbble.s3.amazonaws.com/users/322/screenshots/943660/hq_sm.jpg" alt="Panel 3">
+                                </li>
+                                <li>
+                                    <input type="radio" id="slide4" name="slide">
+                                    <label for="slide4"></label>
+                                    <img src="https://dribbble.s3.amazonaws.com/users/322/screenshots/599584/home.jpg" alt="Panel 4">
+                                </li>
+                            </ul>
+                            </div> -->
+
+
+
+
+
                     </div>
                     <div class="row text-center">
                         <div class="col-md-12 btn-email">
-                            <a class="btn lowercase" href="https://hello.coderaky.com" target="_blank">hello.coderaky.com</a>
+                            <a class="btn lowercase" href="mailto:hello@coderaky.com" target="_blank">hello@coderaky.com</a>
                         </div>
                     </div>
+
+                  
+
                 </section>
             </div>
+
+
             <div class="content-blocks blog">
                 <section class="content">
                     <div class="block-content">
@@ -425,16 +976,15 @@
 
                                 <div class="post">
                                     <div class="post-thumbnail">
-                                        <a class="open-post" href="blog1.html">
-                                            <img src="https://raw.githubusercontent.com/coder-aky/files/master/img/Top%2010%20websites%20for%20Web%20Developers.jpg" alt="">
-                                        </a>
+                                        <a  href="https://medium.com/@coderaky/top-10-websites-for-web-developers-dc263d77f20" target="_blank" ><img src="https://raw.githubusercontent.com/coder-aky/files/master/img/Top%2010%20websites%20for%20Web%20Developers.jpg" alt=""style="-webkit-filter: drop-shadow(5px 5px 5px #222); filter: drop-shadow(5px 5px 5px #222);""></a>
                                     </div>
+
                                     <div class="post-title">
-                                        <a class="open-post" href="blog1.html"><h2>Top 5 websites for Web Developers</h2></a>
+                                        <a  href="https://medium.com/@coderaky/top-10-websites-for-web-developers-dc263d77f20" target="_blank"><h2>Top 10 Websites for Web Developers</h2></a>
                                         <p class="post-info">
-                                            <span class="post-author">Posted by Myself</span>
+                                            <span class="post-author">May 12 </span>
                                             <span class="slash"></span>
-                                            <span class="post-date">Sep 09, 2019</span>
+                                            <span class="post-date"> 5 min read</span>
                                             <span class="slash"></span>
                                             <span class="post-catetory">Web Development</span>
                                         </p>
@@ -442,36 +992,103 @@
                                     <div class="post-body">
                                         <p>Hello Friends,<br>Today we gonna, see some top websites for web developers to increase their productivity,
                                           so without any further chit-chat, lets gets started.</p>
-                                        <a class="btn open-post" href="blog1.html">Read More</a>
+                                        <a class="btn lowercase" href="https://medium.com/@coderaky/top-10-websites-for-web-developers-dc263d77f20"target="_blank"> Read on Medium</a>
 
                                     </div>
                                 </div>
 
+
                                 <div class="post">
                                     <div class="post-thumbnail">
-                                        <a class="open-post" href="blog2.html">
-                                            <img src="images/blog/emoji.jpg" alt="">
+                                        <a  href="https://medium.com/@coderaky/top-11-hack-to-maintain-self-discipline-c4b2347d8e55" target="_blank" ><img src="images/blog/self-discipline.png" alt=""style="-webkit-filter: drop-shadow(5px 5px 5px #222); filter: drop-shadow(5px 5px 5px #222);""></a>
+                                    </div>
+
+                                    <div class="post-title">
+                                        <a  href="https://medium.com/@coderaky/top-11-hack-to-maintain-self-discipline-c4b2347d8e55" target="_blank"><h2>Top 11 hack to maintain self-discipline.</h2></a>
+                                        <p class="post-info">
+                                            <span class="post-author">May 12 </span>
+                                            <span class="slash"></span>
+                                            <span class="post-date"> 2 min read</span>
+                                            <span class="slash"></span>
+                                            <span class="post-catetory">Self Discipline</span>
+                                        </p>
+                                    </div>
+                                    <div class="post-body">
+                                        <p>Learn the 11 easy life hacks to maintain your self-discipline…</p>
+                                        <a class="btn lowercase" href="https://medium.com/@coderaky/top-11-hack-to-maintain-self-discipline-c4b2347d8e55"target="_blank"> Read on Medium</a>
+
+                                    </div>
+                                </div>
+
+
+
+
+                                <div class="post">
+                                    <span class='quora-content-embed' data-name='Is-it-possible-to-reach-100-RP-with-only-Elite-Pass-not-Elite-Pass-Plus-in-PUBG-Mobile/answer/AbhishekKumar-Yadav'>Read <a class='quora-content-link' data-width='560' data-height='260' href='https://www.quora.com/Is-it-possible-to-reach-100-RP-with-only-Elite-Pass-not-Elite-Pass-Plus-in-PUBG-Mobile/answer/AbhishekKumar-Yadav' data-type='answer' data-id='179510992' data-key='7533b79bf9b52b11037586682717387c' load-full-answer='False' data-embed='seglfig'><a href='https://www.quora.com/AbhishekKumar-Yadav'>AbhishekKumar Yadav</a>&#039;s <a href='/Is-it-possible-to-reach-100-RP-with-only-Elite-Pass-not-Elite-Pass-Plus-in-PUBG-Mobile?top_ans=179510992'>answer</a> to <a href='/Is-it-possible-to-reach-100-RP-with-only-Elite-Pass-not-Elite-Pass-Plus-in-PUBG-Mobile' ref='canonical'><span class="rendered_qtext">Is it possible to reach 100 RP with only Elite Pass (not Elite Pass Plus) in PUBG Mobile?</span></a></a> on <a href='https://www.quora.com'>Quora</a><script type="text/javascript" src="https://www.quora.com/widgets/content"></script></span>
+                                    <div class="post-title">
+                                        <a  href="https://www.quora.com/Is-it-possible-to-reach-100-RP-with-only-Elite-Pass-not-Elite-Pass-Plus-in-PUBG-Mobile/answer/AbhishekKumar-Yadav" target="_blank"><h2>possible to reach 100 RP in PUBG Mobile ?</h2></a>
+                                        <p class="post-info">
+                                            <span class="post-author">Mar 13</span>
+                                            <span class="slash"></span>
+                                            <span class="post-date">5 min read</span>
+                                            <span class="slash"></span>
+                                            <span class="post-catetory">PUBG Mobile</span>
+                                        </p>
+                                    </div>
+                                    <div class="post-body">
+                                        <p>Here is what I have prepared after doing enough work and covering all aspects… </p>
+                                        <a class="btn lowercase" href="https://www.quora.com/Is-it-possible-to-reach-100-RP-with-only-Elite-Pass-not-Elite-Pass-Plus-in-PUBG-Mobile/answer/AbhishekKumar-Yadav" target="_blank">Read on Quora</a>
+                                    </div>
+                                </div>
+
+
+
+
+                                <div class="post">
+                                    <div class="post-thumbnail">
+                                        <a class="open-post" href="emoji.html">
+                                            <img src="images/blog/emoji.jpg" alt=""style="-webkit-filter: drop-shadow(5px 5px 5px #222); filter: drop-shadow(5px 5px 5px #222);"">
                                         </a>
                                     </div>
                                     <div class="post-title">
-                                        <a class="open-post" href="blog2.html"><h2>Emojis</h2></a>
+                                        <a class="open-post" href="emoji.html"><h2>Emojis</h2></a>
                                         <p class="post-info">
-                                            <span class="post-author">Posted by Myself</span>
+                                            <span class="post-author">Sep 09, 2019</span>
                                             <span class="slash"></span>
-                                            <span class="post-date">Sep 09, 2019</span>
+                                            <span class="post-date">3 min read</span>
                                             <span class="slash"></span>
                                             <span class="post-catetory">Fun</span>
                                         </p>
                                     </div>
                                     <div class="post-body">
                                         <p>Hello Friends,<br>Today we gonna, see some meaning of those cool emoji which we use in our day today life. </p>
-                                        <a class="btn open-post" href="blog2.html">Read More</a>
+                                        <a class="btn open-post" href="emoji.html">Read More</a>
                                     </div>
                                 </div>
 
-                                <div class="post-title">
-                                    <a class="open-post" ><h2>Stay tuned for more better and interesting blogs in future...</h2></a>
+
+                                <div class="row text-center">
+                                    <div class="col-md-12 btn-email">
+                                        <a class="btn lowercase" href="mailto:hello@coderaky.com" target="_blank">hello@coderaky.com</a>
+                                    </div>
                                 </div>
+
+                                <!-- <div class="text-center">
+                                    <ul class="pagination">
+                                        <li class="page-item disabled">
+                                          <a class="page-link" href="#" tabindex="-1">Previous</a>
+                                        </li>
+                                        <li class="page-item active">
+                                          <a class="page-link" href="#">1 <span class="sr-only">(current)</span></a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                        <li class="page-item">
+                                          <a class="page-link" href="#">Next</a>
+                                        </li>
+                                    </ul>
+                                </div> -->
 
 
                             </div>
@@ -486,6 +1103,10 @@
                         <h3 class="block-title">Want to say something...</h3>
                         <div class="row">
                             <div class="col-md-6">
+
+
+                                
+
                               <form class="contact-form" action="https://formspree.io/abhishekkumaryadavofficial@gmail.com" method="post">
                                   <div class="row">
                                       <div class="col-sm-6">
@@ -528,7 +1149,7 @@
                                         <i class="ion-ios-telephone-outline"></i>
                                     </div>
                                     <div class="contact-details">
-                                        <h5>Call Us</h5>
+                                        <h5>Call Me</h5>
                                         <p> <a href="tel:9453457386" target="_blank" >+91 9453457386</a></p>
                                     </div>
                                 </div>
@@ -537,11 +1158,11 @@
                                         <i class="ion-ios-email-outline"></i>
                                     </div>
                                     <div class="contact-details">
-                                        <h5>Enquiries</h5>
+                                        <h5>Email me</h5>
                                         <p><a href="mailto:hello@coderaky.com" target="_blank" >hello@coderaky.com</a></p>
                                     </div>
                                 </div>
-                                <div class="contact-content">
+                                <!-- <div class="contact-content">
                                     <div class="contact-icon">
                                         <i class="ion-link"></i>
                                     </div>
@@ -549,8 +1170,44 @@
                                         <h5>Social Links</h5>
                                         <p><a href="https://hello.coderaky.com" target="_blank" >hello.coderaky.com</a></p>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
+
+                            <!-- <div class="login-box">
+                                <h2>Login</h2>
+                                <form action="https://formspree.io/abhishekkumaryadavofficial@gmail.com" method="post">
+
+                                    <div class="user-box">
+                                        <input type="text"  name="name"  required>
+                                        <label>Name</label>
+                                    </div>
+
+                                    <div class="user-box">
+                                        <input type="email"  name="email"  required>
+                                        <label>Email</label>
+                                    </div>
+
+                                    <div class="user-box">
+                                        <input type="text"  name="subject"  required>
+                                        <label>Subject</label>
+                                    </div>
+
+                                     
+                                  <div class="user-box">
+                                    <input type="text" name="message" required="">
+                                    <label>message</label>
+                                  </div>
+                                  
+                                  <a href="#">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    Submit
+                                  </a>
+                                </form>
+                              </div> -->
+
                             <!-- <div class="col-md-12">
 
                                 <div id="map"></div>
@@ -567,8 +1224,11 @@
         </div>
     </section>
     <script src="js/plugins.min.js"></script>
+    <script src="js/textrolling.js"></script>
+    <script src='https://saurabhdaware.github.io/github-profile-card/card.js'></script>
+    <!-- <script src="js/darkmood.js"></script> -->
     <script src="https://strangecube.com/audioplay2/player/js/audioplay-2.0.0.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB64kJJiSynOc9ZqkNMOyl94cvsw5Z2uno"></script>
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB64kJJiSynOc9ZqkNMOyl94cvsw5Z2uno"></script> -->
     <script src="js/main.js"></script>
 </body>
 </html>
