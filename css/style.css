@@ -1,3 +1,36 @@
+
+/*------------------------------------------------------------------
+
+    [Table of contents]
+    
+    0. General Styles
+    1. Preloader
+    2. Home Styles
+    3. Menu Styles
+    4. Page Content
+    5. Name Block
+    6. About Block
+    7. Portfolio Block
+    8. Blog Block
+    9. Contact Block
+   10. Responsive
+
+-------------------------------------------------------------------*/
+
+
+/* -------------------------------------------------------------------
+
+                        0. General Styles
+
+-------------------------------------------------------------------*/
+/* Profile  */
+.service-icon img{
+    height: 60px;
+    width: 60px;
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(5px 5px 5px #222);
+}
+
 body {
     font: 400 14px 'Poppins', sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -8,9 +41,13 @@ body {
     line-height: 2.2;
     overflow-x: hidden;
 }
-div.polaroid {
-  box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.2), 0 24px 80px 0 rgba(0, 0, 0, 0.19);
+.techimg img {
+    width: 100%;
+    height: auto;
+    max-width: 100px;
+
 }
+
 
 a {
     transition: all 0.3s;
@@ -34,6 +71,7 @@ img {
 }
 
 
+/* texts */
 
 h1,
 h2,
@@ -104,6 +142,7 @@ small {
     color: #333;
 }
 
+/* Buttons */
 
 a:not([href]):not([tabindex]) {
     color: #FFF;
@@ -155,8 +194,6 @@ a:not([href]):not([tabindex]) {
 
 .btn-download:before {
     position: absolute;
-/*     content: '\f1fe'; */
-    /* content: '\f46b'; for m*/
     content: '\f407';
     font-family: 'Ionicons';
     top: 12px;
@@ -228,6 +265,12 @@ a:not([href]):not([tabindex]) {
     text-transform: lowercase;
 }
 
+/*-------------------------------------------------------------------
+
+                        1. Preloader
+
+-------------------------------------------------------------------*/
+ 
 .preloader {
     position: fixed;
     left: 0;
@@ -323,6 +366,11 @@ a:not([href]):not([tabindex]) {
     animation-name: pulse;
 }
 
+/*-------------------------------------------------------------------
+
+                        2. Home Styles
+
+-------------------------------------------------------------------*/
 
 .home {
     width: 100%;
@@ -334,7 +382,7 @@ a:not([href]):not([tabindex]) {
 }
 
 .home.img-bg {
-    background: url(../images/bg/gradient-bg.jpg);
+    background: url(../images/bg/demo.jpg);
     background-size: cover;
 }
 
@@ -389,6 +437,11 @@ a:not([href]):not([tabindex]) {
 .opacity9 {
     opacity: 0.9;
 }
+.opacity8
+{
+    opacity: 0.8;
+
+}
 
 .opacity7 {
     opacity: 0.7;
@@ -437,6 +490,7 @@ a:not([href]):not([tabindex]) {
     width: 100%;
 }
 
+/* HERO SLIDER*/
 
 #lionhero {
     z-index: 0;
@@ -517,6 +571,11 @@ a:not([href]):not([tabindex]) {
     display: none;
 }
 
+/*-------------------------------------------------------------------
+
+                        3. Menu Styles
+
+-------------------------------------------------------------------*/
 
 .menu-blocks {
     transition: all 0.5s;
@@ -604,6 +663,7 @@ h2.menu-item:after {
     background: rgba(0, 0, 0, 0.1);
 }
 
+/* --- Inline Menu --- */
 
 .inline-menu-container {
     background: #F1F3F6;
@@ -709,10 +769,10 @@ h2.menu-item:after {
 }
 
 .sidebar-menu {
-    background: #111;
+    background: #111; 
     height: 100%;
     left: 0;
-    position: fixed;
+    position: fixed; 
     width: 20%;
 }
 
@@ -768,6 +828,11 @@ h2.menu-item:after {
 	top: 0;
 }
 
+/*-------------------------------------------------------------------
+
+                        4. Page Content
+
+-------------------------------------------------------------------*/
 
 .content-blocks {
     position: fixed;
@@ -778,9 +843,10 @@ h2.menu-item:after {
     overflow-y: scroll;
     top: 100%;
     left: 30%;
-    background: #FFF;
+    background: #fff;
     transition: opacity 0.7s ease-out;
     z-index: 1;
+    -webkit-overflow-scrolling: touch;
 }
 
 .content-blocks.showx {
@@ -841,7 +907,11 @@ h2.menu-item:after {
     font-weight: 600;
 }
 
+/*-------------------------------------------------------------------
 
+                        5. NAME BLOCK
+
+-------------------------------------------------------------------*/
 
 .name-block {
     position: absolute;
@@ -969,7 +1039,11 @@ h2.menu-item:after {
     color: #333;
 }
 
+/*-------------------------------------------------------------------
 
+                        6. ABOUT BLOCK
+
+-------------------------------------------------------------------*/
 
 .about-block {
     position: absolute;
@@ -1072,6 +1146,7 @@ h2.menu-item:after {
     color: #333;
     font-weight: 500;
     margin-bottom: 10px;
+    font-size: 30px;
 }
 
 .progress-bar-label span {
@@ -1211,6 +1286,7 @@ h2.menu-item:after {
 
 .awards:hover img {
     opacity: 1;
+
 }
 
 .pricing-area {
@@ -1342,6 +1418,11 @@ h4.package {
     width: 100%;
 }
 
+/*-------------------------------------------------------------------
+
+                        7. PORTFOLIO BLOCK
+
+-------------------------------------------------------------------*/
 
 .portfolio-block {
     position: absolute;
@@ -1369,6 +1450,7 @@ h4.package {
     transform: rotate(34deg);
 }
 
+/* Portfolio */
 
 .portfolio-container {
     overflow: hidden;
@@ -1612,7 +1694,11 @@ h4.package {
     color: #333;
 }
 
+/*-------------------------------------------------------------------
 
+                        8. BLOG BLOCK
+
+-------------------------------------------------------------------*/
 
 .blog-block {
     position: absolute;
@@ -1781,6 +1867,17 @@ h4.package {
     overflow: auto;
     padding: 30px 0 0;
     margin: 30px 0 0;
+    /* -webkit-filter: drop-shadow(5px 5px 5px 1px #222);
+  filter: drop-shadow(5px 5px 5px  #222); */
+  box-shadow: inset 0 0 2px hsla(0,0%,0%,.2),
+                0 3px 1px hsla(0,0%,100%,.75),
+                0 -1px 1px 2px hsla(0,0%,0%,.1);
+}
+
+.author-box :hover{
+    box-shadow: inset 0 0 2px hsla(0,0%,0%,.2),
+                0 3px 1px hsla(0,0%,100%,.75),
+                0 -3px 2px 3px hsla(0,0%,0%,.1);
 }
 
 .author-box h3 {
@@ -1961,6 +2058,11 @@ h4.package {
     text-align: right;
 }
 
+/*-------------------------------------------------------------------
+
+                        9. CONTACT BLOCK
+
+-------------------------------------------------------------------*/
 
 .contact-block {
     position: absolute;
@@ -2062,6 +2164,11 @@ h4.package {
     width: 100%;
 }
 
+/*-------------------------------------------------------------------
+
+                        10. RESPONSIVE
+
+-------------------------------------------------------------------*/
 
 @media (min-width:1920px) {
     .name-block {
@@ -2631,7 +2738,8 @@ h4.package {
     .author-box img {
         display: block;
         margin: 0 auto 30px;
-        width: 150px;
+        height: auto;
+        max-width: 100px;
     }
     .comments-list .children {
         padding-left: 0;
@@ -2691,18 +2799,23 @@ h4.package {
     }
 }
 
+/*-------------------------------------------------------------------
+
+                         Buy Now Button
+
+-------------------------------------------------------------------*/
 
 .buy-now {
-    background-color: #82B441;
-    color: #FFF;
-    display: block;
-    font-size: 13px;
-    font-weight: 500;
+    background-color: #82B441;  
+    color: #FFF; 
+    display: block; 
+    font-size: 13px; 
+    font-weight: 500; 
     left: 50px;
     letter-spacing: 1.5px;
-    padding: 3px 15px;
+    padding: 3px 15px; 
     position: absolute;
-    top: 20px;
+    top: 20px; 
     z-index: 999
 }
 .buy-now:hover {
